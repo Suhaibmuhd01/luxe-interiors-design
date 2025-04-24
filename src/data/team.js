@@ -1,7 +1,7 @@
 export const teamMembers = [
     {
       id: 1,
-      name: "Sarah Richardson",
+      name: "Sarah Muhammad",
       position: "Founder & Chief Executive Officer",
       image: "/src/assets/images/team/ceo.jpg",
       bio: "With over 20 years of experience in luxury interior design, Sarah established Luxury Interior Design & Decoration Limited with a vision to create exceptional living and working environments.",
@@ -12,7 +12,7 @@ export const teamMembers = [
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "farouq sani",
       position: "Design Director",
       image: "/src/assets/images/team/design-director.jpg",
       bio: "Michael brings 15 years of experience in high-end residential and commercial design to his role as Design Director, where he oversees all creative aspects of our projects.",
@@ -23,7 +23,7 @@ export const teamMembers = [
     },
     {
       id: 3,
-      name: "Olivia Martinez",
+      name: "Ahmad isa",
       position: "Senior Interior Designer",
       image: "/src/assets/images/team/senior-designer.jpg",
       bio: "Olivia specializes in creating refined residential interiors that balance luxury with functionality, bringing 10 years of experience to her role as Senior Designer.",
@@ -34,7 +34,7 @@ export const teamMembers = [
     },
     {
       id: 4,
-      name: "David Kim",
+      name: "rabi'u  yusuf",
       position: "Commercial Design Specialist",
       image: "/src/assets/images/team/commercial-specialist.jpg",
       bio: "David leads our commercial design projects, bringing expertise in workplace strategy, hospitality design, and retail environments with 12 years industry experience.",
@@ -45,7 +45,7 @@ export const teamMembers = [
     },
     {
       id: 5,
-      name: "Emily Thompson",
+      name: "jamilu ysusf",
       position: "Project Manager",
       image: "/src/assets/images/team/project-manager.jpg",
       bio: "Emily ensures the seamless execution of our design projects, coordinating contractors, managing timelines, and overseeing budgets with meticulous attention to detail.",
@@ -56,7 +56,7 @@ export const teamMembers = [
     },
     {
       id: 6,
-      name: "James Wilson",
+      name: "Abdurrasheed sani",
       position: "Custom Furniture Specialist",
       image: "/src/assets/images/team/furniture-specialist.jpg",
       bio: "James specializes in designing and sourcing bespoke furniture pieces that become the centerpieces of our luxury interiors, with a background in furniture design and fabrication.",
@@ -67,7 +67,7 @@ export const teamMembers = [
     },
     {
       id: 7,
-      name: "Sophia Lee",
+      name: "iiya saleh agadasawa",
       position: "Textile & Materials Specialist",
       image: "/src/assets/images/team/textile-specialist.jpg",
       bio: "Sophia brings specialized expertise in textiles, wallcoverings, and material finishes, curating the perfect materials palette for each project with an eye for texture and detail.",
@@ -78,7 +78,7 @@ export const teamMembers = [
     },
     {
       id: 8,
-      name: "Robert Johnson",
+      name: "Dauda isa  madigawa",
       position: "Lighting Design Specialist",
       image: "/src/assets/images/team/lighting-specialist.jpg",
       bio: "Robert specializes in creating comprehensive lighting designs that enhance architectural features, artwork, and the overall atmosphere of our interior spaces.",

@@ -41,7 +41,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
-    // </HelmetProvider>
+     </HelmetProvider>
   );
 }
 

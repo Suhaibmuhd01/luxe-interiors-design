@@ -207,7 +207,6 @@ const Contact = () => {
                 { name: "Instagram", icon: "instagram", url: "https://instagram.com/@LuxeInteriorsDecor" },
                 { name: "Pinterest", icon: "pinterest", url: "https://pinterest.com/Luxury Interior Designs and Decoration Ltd" },
                 { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/Luxury Interior Design and Decoration Ltd" },
-                { name: "Houzz", icon: "house", url: "https://houzz.com" }
               ].map((social) => (
                 <motion.a
                   key={social.name}

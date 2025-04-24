@@ -1,6 +1,5 @@
-// src/components/ui/ProjectCard.jsx
 import { useState } from 'react';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaPlus, FaLink } from 'react-icons/fa';
 
 const ProjectCard = ({ project }) => {

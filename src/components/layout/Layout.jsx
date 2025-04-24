@@ -1,4 +1,3 @@
-// src/components/layout/Layout.jsx
 import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './Header';
