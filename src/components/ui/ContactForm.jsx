@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa';
+import emailjs from '@emailjs/browser'; // Import EmailJS
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,20 +26,30 @@ const ContactForm = () => {
     }),
     onSubmit: async (values, { resetForm }) => {
       setIsSubmitting(true);
-      
+
       try {
-        // In a real implementation, you would send this data to your backend
-        // For demonstration, we'll simulate a successful API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        console.log('Form submitted with values:', values);
+        // Send form data using EmailJS
+        const response = await emailjs.send(
+          'service_0sxrzkp',
+          'template_xenx50c',
+          {
+            name: values.name,
+            email: values.email,
+            phone: values.phone,
+            subject: values.subject,
+            message: values.message
+          },
+          'UX0ocpYkMlDAWjzlh'
+        );
+
+        console.log('Email sent successfully:', response);
         setSubmitStatus('success');
         resetForm();
-        
+
         // Reset success message after 5 seconds
         setTimeout(() => setSubmitStatus(null), 5000);
       } catch (error) {
-        console.error('Error submitting form:', error);
+        console.error('Error sending email:', error);
         setSubmitStatus('error');
       } finally {
         setIsSubmitting(false);
@@ -71,6 +82,7 @@ const ContactForm = () => {
       )}
       
       <form onSubmit={formik.handleSubmit} className="space-y-6">
+        {/* Form fields remain unchanged */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -80,7 +92,13 @@ const ContactForm = () => {
               id="name"
               name="name"
               type="text"
-              className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
+              
+              /* className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
+                formik.touched.name && formik.errors.name 
+                  ? 'border-red-500 focus:ring-red-200' 
+                  : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
+              }`} */
+              className={`w-full px-4 py-2 border rounded-md text-base text-gray-900 focus:ring-2 focus:outline-none ${
                 formik.touched.name && formik.errors.name 
                   ? 'border-red-500 focus:ring-red-200' 
                   : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
@@ -100,8 +118,13 @@ const ContactForm = () => {
               id="email"
               name="email"
               type="email"
-              className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
+              /* className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
                 formik.touched.email && formik.errors.email 
+                  ? 'border-red-500 focus:ring-red-200' 
+                  : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
+              }`} */
+              className={`w-full px-4 py-2 border rounded-md text-base text-gray-900 focus:ring-2 focus:outline-none ${
+                formik.touched.name && formik.errors.name 
                   ? 'border-red-500 focus:ring-red-200' 
                   : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
               }`}
@@ -122,8 +145,13 @@ const ContactForm = () => {
               id="phone"
               name="phone"
               type="text"
-              className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
+           /*    className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
                 formik.touched.phone && formik.errors.phone 
+                  ? 'border-red-500 focus:ring-red-200' 
+                  : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
+              }`} */
+              className={`w-full px-4 py-2 border rounded-md text-base text-gray-900 focus:ring-2 focus:outline-none ${
+                formik.touched.name && formik.errors.name 
                   ? 'border-red-500 focus:ring-red-200' 
                   : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
               }`}
@@ -142,8 +170,8 @@ const ContactForm = () => {
               id="subject"
               name="subject"
               type="text"
-              className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
-                formik.touched.subject && formik.errors.subject 
+              className={`w-full px-4 py-2 border rounded-md text-base text-gray-900 focus:ring-2 focus:outline-none ${
+                formik.touched.name && formik.errors.name 
                   ? 'border-red-500 focus:ring-red-200' 
                   : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
               }`}
@@ -163,8 +191,13 @@ const ContactForm = () => {
             id="message"
             name="message"
             rows="5"
-            className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
+           /*  className={`w-full px-4 py-2 border rounded-md text-base focus:ring-2 focus:outline-none ${
               formik.touched.message && formik.errors.message 
+                ? 'border-red-500 focus:ring-red-200' 
+                : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
+            }`} */
+            className={`w-full px-4 py-2 border rounded-md text-base text-gray-900 focus:ring-2 focus:outline-none ${
+              formik.touched.name && formik.errors.name 
                 ? 'border-red-500 focus:ring-red-200' 
                 : 'border-gray-300 focus:ring-primary/20 focus:border-primary'
             }`}
@@ -202,7 +235,7 @@ const ContactForm = () => {
           <motion.button
             type="button"
             onClick={() => formik.resetForm()}
-            className="px-8 py-3 bg-white border border-secondary text-secondary hover:bg-secondary/5 rounded-full font-medium transition-all duration-300"
+            className="px-8 py-3 bg-green border text-luxury-dark hover:bg-secondary/5 rounded-full font-medium transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

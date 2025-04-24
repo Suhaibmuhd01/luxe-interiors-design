@@ -52,9 +52,7 @@ const Navbar = () => {
               {link.title}
             </Link>
           ))}
-          <Link to="/contact" className="px-6 py-2 text-white transition-all duration-300 rounded-full bg-secondary hover:bg-secondary-dark">
-            Get Quote
-          </Link>
+          
         </div>
         
         {/* Mobile Menu Button */}
@@ -85,9 +83,7 @@ const Navbar = () => {
                   {link.title}
                 </Link>
               ))}
-              <Link to="/contact" className="px-6 py-2 text-center text-white transition-all duration-300 rounded-full bg-secondary hover:bg-secondary-dark">
-                Get Quote
-              </Link>
+              
             </div>
           </motion.div>
         )}

@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Modern Living Room",
     description: "A stylish and comfortable living space with neutral tones and green accents.",
-    image: "/images/living-room.jpg", // Make sure this image exists in public/images
+    image: "/images/living-room.jpg", //this image exists in public/images
   },
   {
     id: 2,

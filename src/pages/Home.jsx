@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import SEO from '../components/shared/SEO';
 import Hero from '../components/sections/Hero';
 import FeaturedProjects from '../components/sections/FeaturedProjects';
