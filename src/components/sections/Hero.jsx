@@ -3,8 +3,6 @@ import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef} from 'react';
-import bg1 from '../../assets/images/bg-1.jpeg';
-import bg2 from '../../assets/images/bg-2.jpeg';
 import bg3 from '../../assets/images/bg-3.jpeg';
 
 // const sampleImages = [bg1, bg2, bg3];
@@ -12,11 +10,10 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
-const sampleImages = [ bg1, bg2, bg3 
-  /* 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
+const sampleImages = [
+  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
   'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
-  'https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
-   'https://www.istockphoto.com/photo/modern-elegant-living-room-interior-design-3d-render-gm2162697494-583078795?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Finterio-deco&utm_medium=affiliate&utm_source=unsplash&utm_term=interio+deco%3A%3A%3A', */
+   bg3,
 ];
 
 const heroSlides = [
