@@ -1,52 +1,102 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import { motion} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef} from 'react';
+import bg3 from '../../assets/images/bg-3.jpeg';
+
+// const sampleImages = [bg1, bg2, bg3];
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
+
+const sampleImages = [
+  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
+  'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
+   bg3,
+];
 
 const heroSlides = [
   {
     id: 1,
     title: "Transform Your Space",
     subtitle: "Luxury Interior Design Solutions",
-    image: "/src/assets/images/hero1.jpg", // You'll need to add these images
+    image: sampleImages[0],
     description: "Creating timeless elegance through bespoke interior design"
   },
   {
     id: 2,
     title: "Elevate Your Lifestyle",
     subtitle: "Premium Decoration Services",
-    image: "/src/assets/images/hero2.jpg",
+    image: sampleImages[1], 
     description: "Crafting spaces that reflect your unique personality and taste"
   },
   {
     id: 3,
     title: "Exceptional Craftsmanship",
     subtitle: "Attention to Every Detail",
-    image: "/src/assets/images/hero3.jpg",
+    image: sampleImages[2], 
     description: "Merging functionality with exquisite aesthetic appeal"
   }
 ];
 
 const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const swiperRef = useRef(null);
+
+  // Content animations
+  const fadeInUpVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (custom) => ({
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.7, 
+        delay: custom * 0.2, 
+        ease: "easeOut" 
+      }
+    }),
+    exit: { 
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.3 }
+    }
+  };
+
   return (
     <section className="relative h-screen overflow-hidden">
       <Swiper
         modules={[EffectFade, Autoplay, Pagination]}
         effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={800}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
-        pagination={{ clickable: true }}
+        pagination={{ 
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}" style="width: 12px; height: 12px; background: rgba(255, 255, 255, 0.5); opacity: 1;"></span>`;
+          },
+        }}
         className="h-full w-full"
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+        onSlideChange={(swiper) => {
+          setIsAnimating(true);
+          setTimeout(() => {
+            setActiveIndex(swiper.activeIndex);
+            setIsAnimating(false);
+          }, 300); // Match this with fade transition duration
+        }}
       >
-        {heroSlides.map((slide) => (
-          <SwiperSlide key={slide.id}>
+        {heroSlides.map((slide, index) => (
+          <SwiperSlide key={slide.id} className='h-full w-full'>
             <div 
-              className="h-full w-full bg-cover bg-center relative" 
+              className="h-full w-full bg-cover bg-center relative flex items-stretch transition-opacity duration-800" 
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {/* Overlay */}
@@ -54,54 +104,73 @@ const Hero = () => {
               
               {/* Content */}
               <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-                <div className="max-w-3xl">
-                  <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-white font-serif text-4xl md:text-6xl mb-4"
-                  >
-                    {slide.title}
-                  </motion.h2>
-                  
-                  <motion.h3 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="text-luxury-gold font-light text-xl md:text-2xl mb-6"
-                  >
-                    {slide.subtitle}
-                  </motion.h3>
-                  
-                  <motion.p 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
-                    className="text-white/90 text-lg mb-8"
-                  >
-                    {slide.description}
-                  </motion.p>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
-                    className="flex flex-col sm:flex-row gap-4"
-                  >
-                    <Link 
-                      to="/services" 
-                      className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full transition-all duration-300 text-center"
+                <AnimatePresence mode="wait">
+                  {activeIndex === index && !isAnimating && (
+                    <motion.div 
+                      key={`content-${slide.id}`}
+                      className="max-w-3xl"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
                     >
-                      Our Services
-                    </Link>
-                    <Link 
-                      to="/gallery" 
-                      className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full transition-all duration-300 text-center"
-                    >
-                      View Projects
-                    </Link>
-                  </motion.div>
-                </div>
+                      <motion.h2
+                        variants={fadeInUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        custom={1}
+                        className="text-white font-serif text-4xl md:text-6xl mb-4"
+                      >
+                        {slide.title}
+                      </motion.h2>
+                      
+                      <motion.h3 
+                        variants={fadeInUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        custom={2}
+                        className="text-luxury-gold font-light text-xl md:text-2xl mb-6"
+                      >
+                        {slide.subtitle}
+                      </motion.h3>
+                      
+                      <motion.p 
+                        variants={fadeInUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        custom={3}
+                        className="text-white/90 text-lg mb-8"
+                      >
+                        {slide.description}
+                      </motion.p>
+                      
+                      <motion.div
+                        variants={fadeInUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        custom={4}
+                        className="flex flex-col sm:flex-row gap-4"
+                      >
+                        <Link 
+                          to="/services" 
+                          className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full transition-all duration-300 text-center"
+                        >
+                          Our Services
+                        </Link>
+                        <Link 
+                          to="/gallery" 
+                          className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full transition-all duration-300 text-center"
+                        >
+                          View Projects
+                        </Link>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </SwiperSlide>

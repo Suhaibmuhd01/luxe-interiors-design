@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/shared/SEO';
+// import motion from 'framer-motion'
 
 const NotFound = () => {
   return (
