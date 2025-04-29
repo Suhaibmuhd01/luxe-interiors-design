@@ -3,7 +3,6 @@ import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef} from 'react';
-import bg3 from '../../assets/images/bg-3.jpeg';
 
 // const sampleImages = [bg1, bg2, bg3];
 import 'swiper/css';
@@ -13,7 +12,7 @@ import 'swiper/css/pagination';
 const sampleImages = [
   'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
   'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
-   bg3,
+  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&q=85&w=1920&h=1080'
 ];
 
 const heroSlides = [
