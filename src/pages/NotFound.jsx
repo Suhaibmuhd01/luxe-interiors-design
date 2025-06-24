@@ -13,7 +13,7 @@ const NotFound = () => {
 
       <div className="min-h-screen flex items-center justify-center px-4 py-20">
         <div className="text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -21,7 +21,7 @@ const NotFound = () => {
           >
             404
           </motion.h1>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ const NotFound = () => {
           >
             Page Not Found
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,14 +39,14 @@ const NotFound = () => {
           >
             The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full inline-block transition-colors duration-300"
             >
               Back to Home

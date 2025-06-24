@@ -5,19 +5,19 @@ const testimonials = [
     name: "Zainab Umar",
     feedback:
       "Luxury Interior transformed my living room into a paradise. The colors, furniture, and overall vibe were just perfect!",
-    image: "/images/testimonials/zainab.jpg",
+    image: "assets/images/client3.jpg",
   },
   {
-    name: "Ahmed Bello",
+    name: "Abdullatif ajedekun",
     feedback:
       "Professional, creative, and timely service. I couldn't have asked for a better interior design partner.",
-    image: "/images/testimonials/ahmed.jpg",
+    image: "assets/images/client2.jpg",
   },
   {
-    name: "Fatima Yusuf",
+    name: "Ejedike rugdof",
     feedback:
       "From design to execution, their team was supportive and skilled. Highly recommend them for premium interior design!",
-    image: "/images/testimonials/fatima.jpg",
+    image: "assets/images/client1.jpg",
   },
 ];
 

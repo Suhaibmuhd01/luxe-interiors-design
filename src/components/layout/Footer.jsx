@@ -1,11 +1,10 @@
-// src/components/layout/Footer.jsx
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest, FaLinkedinIn, FaHeart } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart, FaTiktok } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -18,11 +17,12 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: <FaFacebookF />, url: 'https://facebook.com/', label: 'Facebook' },
-                { icon: <FaTwitter />, url: 'https://twitter.com', label: 'Twitter' },
-                { icon: <FaInstagram />, url: 'https://instagram.com/@LuxeInteriorsDecor', label: 'Instagram' },
-                { icon: <FaPinterest />, url: 'https://pinterest.com/Luxury Interior Designs and Decoration Ltd', label: 'Pinterest' },
-                { icon: <FaLinkedinIn />, url: 'https://linkedin.com/Luxury Interior Design and Decoration Ltd', label: 'LinkedIn' }
+                { icon: <FaFacebookF />, url: 'https://facebook.com/profile.php?id=61567135902792&mibextid=ZbWKwL', label: 'Facebook' },
+                { icon: <FaTwitter />, url: 'https://twitter.com/luxury57258?s=09', label: 'Twitter' },
+                { icon: <FaInstagram />, url: ' https://www.instagram.com/luxuryinteriodesign01?igsh=eG90cWlsdHF3NWNr', label: 'Instagram' },
+                { icon: <FaTiktok />, url: 'https://tiktok.com/@luxury.interior?_t=ZM-8tCiQmKUM57&_r=1', label: 'Tiktok' },
+                // { icon: <FaLinkedinIn />, url: 'https://linkedin.com/', label: 'LinkedIn' }
+
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -38,7 +38,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-white">Quick Links</h3>
@@ -52,8 +52,8 @@ const Footer = () => {
                 { name: 'Contact', path: '/contact' }
               ].map((link, index) => (
                 <li key={index}>
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
                   >
                     {link.name}
@@ -62,7 +62,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* Services */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-gray-800 dark:text-white">Our Services</h3>
@@ -76,8 +76,8 @@ const Footer = () => {
                 { name: 'Project Management', path: '/services#management' }
               ].map((service, index) => (
                 <li key={index}>
-                  <Link 
-                    to={service.path} 
+                  <Link
+                    to={service.path}
                     className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300"
                   >
                     {service.name}
@@ -86,7 +86,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* Contact Info */}
           <div>
             <h3 id='contact' className="text-xl font-bold mb-6 text-gray-800 dark:text-white">Contact Us</h3>
@@ -118,7 +118,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Divider */}
         <div className="border-t border-gray-200 dark:border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">

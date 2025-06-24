@@ -34,7 +34,7 @@ const Team = () => {
       <PageBanner
         title="Our Team"
         subtitle="The Creative Minds Behind Our Designs"
-        background="/src/assets/images/team-banner.jpg"
+        background="assets/images/team.jpg"
       />
 
       {/* Team Overview */}
@@ -43,7 +43,7 @@ const Team = () => {
           <div className="mb-16 text-center">
             <AnimatedSection>
               <span className="font-medium text-primary">Meet Our Experts</span>
-              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl">The Talent Behind Our Success</h2>
+              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl text-green-400">The Talent Behind Our Success</h2>
               <div className="w-20 h-1 mx-auto mb-6 bg-secondary"></div>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                 Our team of skilled designers, architects, and project managers brings diverse expertise and a shared commitment to excellence to every project.
@@ -67,17 +67,17 @@ const Team = () => {
                   />
                   <div className="absolute inset-0 flex items-end justify-center transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/70 to-transparent group-hover:opacity-100">
                     <div className="flex gap-3 p-4 mb-2">
-                      <a 
-                        href={`mailto:${member.email}`} 
+                      <a
+                        href={`mailto:${member.email}`}
                         className="flex items-center justify-center w-10 h-10 transition-colors duration-300 bg-white rounded-full text-primary hover:bg-primary hover:text-white"
                         aria-label={`Email ${member.name}`}
                       >
                         <FaEnvelope />
                       </a>
                       {member.linkedin && (
-                        <a 
-                          href={member.linkedin} 
-                          target="_blank" 
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center justify-center w-10 h-10 transition-colors duration-300 bg-white rounded-full text-primary hover:bg-primary hover:text-white"
                           aria-label={`LinkedIn profile of ${member.name}`}
@@ -94,7 +94,7 @@ const Team = () => {
                   <p className="mb-4 text-gray-600 dark:text-gray-300 line-clamp-3">
                     {member.bio}
                   </p>
-                  <button 
+                  <button
                     onClick={() => handleOpenModal(member)}
                     className="font-medium transition-colors duration-300 text-secondary hover:text-secondary-dark"
                   >
@@ -118,7 +118,7 @@ const Team = () => {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/src/assets/images/team-collaboration.jpg"
+                src="assets/images/team2.webp"
                 alt="Team Collaboration"
                 className="w-full h-auto rounded-lg shadow-elegant"
               />
@@ -126,8 +126,8 @@ const Team = () => {
 
             <div>
               <AnimatedSection delay={0.2}>
-                <span className="font-medium text-primary">Our Approach</span>
-                <h2 className="mt-2 mb-6 font-serif text-3xl font-bold md:text-4xl">Collaborative Excellence</h2>
+                <span className="font-medium">Our Approach</span>
+                <h2 className="mt-2 mb-6 font-serif text-3xl font-bold md:text-4xl text-green-400">Collaborative Excellence</h2>
                 <div className="w-20 h-1 mb-6 bg-secondary"></div>
                 <p className="mb-6 text-gray-600 dark:text-gray-300">
                   At Luxury Interior Design & Decoration, we believe that the best results come from collaborative efforts that leverage the diverse talents and perspectives of our team members.
@@ -151,12 +151,12 @@ const Team = () => {
       <section className="py-20">
         <div className="container px-4 mx-auto">
           <AnimatedSection className="p-8 text-center bg-white rounded-lg dark:bg-gray-800 md:p-12 shadow-elegant">
-            <h2 className="mb-6 font-serif text-3xl font-bold md:text-4xl">Join Our Team</h2>
+            <h2 className="mb-6 font-serif text-3xl font-bold md:text-4xl text-green-400">Join Our Team</h2>
             <p className="max-w-3xl mx-auto mb-8 text-gray-600 dark:text-gray-300">
               We're always looking for talented designers, project managers, and support staff who share our passion for exceptional interior design and our commitment to client satisfaction.
             </p>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-block px-8 py-3 font-medium text-white transition-all duration-300 rounded-full bg-primary hover:bg-primary-dark"
             >
               View Open Positions
@@ -168,7 +168,7 @@ const Team = () => {
       {/* Team Member Modal */}
       {selectedMember && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70" onClick={handleCloseModal}>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
@@ -177,7 +177,7 @@ const Team = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
-              <button 
+              <button
                 onClick={handleCloseModal}
                 className="absolute z-10 flex items-center justify-center w-10 h-10 text-gray-800 transition-colors duration-300 rounded-full top-4 right-4 bg-white/80 hover:bg-primary hover:text-white"
                 aria-label="Close modal"
@@ -185,28 +185,28 @@ const Team = () => {
                 <FaTimes />
               </button>
               <div className="h-64 bg-gray-200 sm:h-80">
-                <img 
-                  src={selectedMember.image} 
-                  alt={selectedMember.name} 
-                  className="object-cover object-center w-full h-full" 
+                <img
+                  src={selectedMember.image}
+                  alt={selectedMember.name}
+                  className="object-cover object-center w-full h-full"
                 />
               </div>
             </div>
             <div className="p-6 sm:p-8">
               <h2 className="mb-2 text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{selectedMember.name}</h2>
               <p className="mb-6 font-medium text-primary">{selectedMember.position}</p>
-              
+
               <div className="mb-6">
                 <h3 className="mb-2 text-lg font-bold text-gray-800 dark:text-white">Biography</h3>
                 <p className="mb-4 text-gray-600 dark:text-gray-300">{selectedMember.bio}</p>
                 <p className="text-gray-600 dark:text-gray-300">{selectedMember.extendedBio}</p>
               </div>
-              
+
               <div className="mb-6">
                 <h3 className="mb-2 text-lg font-bold text-gray-800 dark:text-white">Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedMember.expertise.map((skill, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary"
                     >
@@ -215,9 +215,9 @@ const Team = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="flex gap-4">
-                <a 
+                <a
                   href={`mailto:${selectedMember.email}`}
                   className="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 rounded-full bg-primary hover:bg-primary-dark"
                 >
@@ -225,7 +225,7 @@ const Team = () => {
                   Contact
                 </a>
                 {selectedMember.linkedin && (
-                  <a 
+                  <a
                     href={selectedMember.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"

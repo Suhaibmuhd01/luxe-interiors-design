@@ -51,11 +51,11 @@ const About = () => {
       <PageBanner
         title="About Us"
         subtitle="Our Story and Vision"
-        background="/src/assets/images/background.jpg"
+        background="assets/images/about-us.jpg"
       />
 
       {/* Company Overview */}
-      <section id="about"className="py-20">
+      <section id="about" className="py-20">
         <div className="container px-4 mx-auto">
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
             <motion.div
@@ -65,7 +65,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/src/assets/images/about-company.jpg"
+                src="/assets/images/team.jpg"
                 alt="Luxury Interior Design Team"
                 className="w-full h-auto rounded-lg shadow-elegant"
               />
@@ -74,7 +74,7 @@ const About = () => {
             <div>
               <AnimatedSection delay={0.2}>
                 <span className="font-medium text-primary">Our Journey</span>
-                <h2 className="mt-2 mb-6 font-serif text-3xl font-bold md:text-4xl">Transforming Spaces Since 2012</h2>
+                <h2 className="mt-2 mb-6 font-serif text-3xl font-bold md:text-4xl text-green-400">Transforming Spaces Since 2012</h2>
                 <div className="w-20 h-1 mb-6 bg-secondary"></div>
                 <p className="mb-6 text-gray-600 dark:text-gray-300">
                   Luxury Interior Design & Decoration Limited was founded with a singular vision: to create extraordinary living and working environments that inspire, comfort, and reflect the unique personalities of our clients.
@@ -121,7 +121,7 @@ const About = () => {
           <div className="mb-16 text-center">
             <AnimatedSection>
               <span className="font-medium text-primary">Our Philosophy</span>
-              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl">Mission & Vision</h2>
+              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl text-green-400" >Mission & Vision</h2>
               <div className="w-20 h-1 mx-auto mb-6 bg-secondary"></div>
             </AnimatedSection>
           </div>
@@ -140,7 +140,7 @@ const About = () => {
             <AnimatedSection delay={0.4} className="p-8 bg-white rounded-lg dark:bg-gray-800 shadow-elegant">
               <h3 className="mb-4 text-2xl font-bold text-primary">Our Vision</h3>
               <p className="mb-6 text-gray-600 dark:text-gray-300">
-                 To be the leading interior design firm globally, recognized for innovation, craftsmanship, and unparalleled client satisfaction.
+                To be the leading interior design firm globally, recognized for innovation, craftsmanship, and unparalleled client satisfaction.
               </p>
               <p className="mb-6 text-gray-600 dark:text-gray-300">
                 To be the premier interior design firm known for creating spaces that inspire and transform, setting new standards of excellence in the design industry.
@@ -159,7 +159,7 @@ const About = () => {
           <div className="mb-16 text-center">
             <AnimatedSection>
               <span className="font-medium text-primary">What We Believe</span>
-              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl">Our Core Values</h2>
+              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl  text-green-400">Our Core Values</h2>
               <div className="w-20 h-1 mx-auto mb-6 bg-secondary"></div>
               <p className="max-w-2xl text-left mx-auto text-gray-600 dark:text-gray-300">
                 <b>1. Creativity</b>: We push boundaries to deliver unique and innovative designs.
@@ -168,13 +168,13 @@ const About = () => {
                 <b>2. Quality</b>: We  use the finest materials and craftmanship to ensure lasting beauty.
               </p>
               <p className="max-w-2xl text-left mx-auto text-gray-600 dark:text-gray-300">
-                <b>3. Client-centric Approach</b>: We listen, collaborate, and tailored our servicves to meet the standard of corporate and individual needs. 
+                <b>3. Client-centric Approach</b>: We listen, collaborate, and tailored our servicves to meet the standard of corporate and individual needs.
               </p>
               <p className="max-w-2xl text-left mx-auto text-gray-600 dark:text-gray-300">
                 <b>4. Sustainability</b>: We incorporate eco-friendly practices and materials into our designs.
               </p>
               <p className="max-w-2xl text-left mx-auto text-gray-600 dark:text-gray-300">
-                <b>5. Integrity</b>: We maintain transparency, honesty, and professionalism in alll our dealings.
+                <b>5. Integrity</b>: We maintain transparency, honesty, and professionalism in all our dealings.
               </p>
             </AnimatedSection>
           </div>
@@ -201,18 +201,18 @@ const About = () => {
             <div>
               <AnimatedSection delay={0.2}>
                 <span className="font-medium text-primary">Leadership</span>
-                <h2 className="mt-2 mb-6 font-serif text-3xl font-bold md:text-4xl">Meet Our CEO</h2>
+                <h2 className="mt-2 mb-6 font-serif text-3xl font-bold md:text-4xl text-green-400">Meet Our CEO</h2>
                 <div className="w-20 h-1 mb-6 bg-secondary"></div>
-                <h3 className="mb-2 text-2xl font-bold">Sarah Richardson</h3>
+                <h3 className="mb-2 text-2xl font-bold">Hafsat Dahiru .</h3>
                 <p className="mb-6 font-medium text-primary">Founder & Chief Executive Officer</p>
                 <p className="mb-6 text-gray-600 dark:text-gray-300">
-                  With over 20 years of experience in interior design and architecture, Sarah has established herself as a visionary leader in the luxury design industry. Her passion for creating exceptional spaces began early in her career, working with renowned design firms across Europe before founding Luxury Interior Design & Decoration Limited in 2012.
+                  With over 10 years of experience in interior design and architecture, Hafsat Dahiru .h has established herself as a visionary leader in the luxury design industry. Her passion for creating exceptional spaces began early in her career, working with renowned design firms across Europe before founding Luxury Interior Design & Decoration Limited in 2012.
                 </p>
                 <p className="mb-6 text-gray-600 dark:text-gray-300">
-                  Sarah's design philosophy centers on the belief that great design should be both beautiful and functional, enhancing the way people live and work. Her innovative approach and commitment to excellence have earned the company numerous industry awards and a reputation for creating distinctive, sophisticated interiors.
+                  Hafsat Dahiru .'s design philosophy centers on the belief that great design should be both beautiful and functional, enhancing the way people live and work. Her innovative approach and commitment to excellence have earned the company numerous industry awards and a reputation for creating distinctive, sophisticated interiors.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Under Sarah's leadership, the company has grown from a small design studio to a full-service firm with a portfolio of high-profile residential and commercial projects worldwide. She continues to be actively involved in key projects, bringing her unique vision and expertise to every design.
+                  Under Hafsat Dahiru .'s leadership, the company has grown from a small design studio to a full-service firm with a portfolio of high-profile residential and commercial projects worldwide. She continues to be actively involved in key projects, bringing her unique vision and expertise to every design.
                 </p>
               </AnimatedSection>
             </div>
@@ -224,11 +224,6 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="order-first lg:order-last"
             >
-              <img
-                src="/src/assets/images/ceo-portrait.jpg"
-                alt="Sarah Richardson - CEO"
-                className="w-full h-auto rounded-lg shadow-elegant"
-              />
             </motion.div>
           </div>
         </div>

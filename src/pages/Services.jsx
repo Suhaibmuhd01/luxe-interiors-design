@@ -20,8 +20,22 @@ const Services = () => {
     { id: 'consulting', name: 'Consulting' },
   ];
 
-  const filteredServices = activeTab === 'all' 
-    ? allServices 
+  const products = [
+    { id: 1, name: "Elegant Storage Boxes on Marble Table", image: "/assets/images/product1.jpg", description: "A plush, handcrafted sofa that brings elegance and comfort to any living room." },
+    { id: 2, name: "Modern Dining chair", image: "/assets/images/product2.jpg", description: "A stylish table and chair with a contemporary design, perfect for eating food." },
+    { id: 3, name: "Dining Ensemble with Red Velvet Chairs", image: "/assets/images/product3.jpg", description: "A centerpiece dining set made from premium metal and marble." },
+    { id: 4, name: "Elegant Storage Boxes on Marble Table", image: "/assets/images/product4.jpg", description: " Add a touch of refinement to your space with the Luxe Storage Trays, crafted with premium leather and gold accents. Displayed on a marble-topped table, these versatile trays offer stylish organization for any upscale living area or office." },
+    { id: 5, name: "Classic watch", image: "/assets/images/product5.jpg", description: "Infuse classic charm with the Timeless Wall Clock Ensemble, showcasing a curated selection of vintage-inspired clocks with gold and black finishes. Perfect for adding a sophisticated focal point to your luxury interior design." },
+    { id: 6, name: "Decorative Gold Planters", image: "/assets/images/product6.jpg", description: "Transform your interior with the Regal Gold Planters, featuring intricate diamond-patterned designs in a luxurious gold finish. Ideal for showcasing lush greenery or as standalone statement pieces, these planters bring a regal ambiance to any luxury setting." },
+    { id: 7, name: "watches", image: "/assets/images/product7.jpg", description: "A modern watch that combines style and functionality." },
+    { id: 8, name: "Divine Calligraphy Decor", image: "/assets/images/product8.jpg", description: "Enhance your interior with the Divine Calligraphy Decor, featuring elegant Arabic script in gold on a white background with ornate gold frames. This luxurious wall art adds cultural depth and sophistication to your design project." },
+    { id: 9, name: "flower vas", image: "/assets/images/product9.jpg", description: "Add a touch of timeless elegance to your space with the Elegant Floral Vase, crafted from premium glass with a subtle gold rim. Perfect for showcasing fresh blooms or standing alone as a luxurious accent, this vase enhances any luxury interior with its refined design and delicate craftsmanship." },
+    { id: 10, name: "Velvet Haven Sofa Set", image: "/assets/images/product10.jpg", description: "Unwind in style with the Velvet Haven Sofa Set, featuring plush beige velvet upholstery and gold-trimmed frames. This luxurious living room ensemble adds warmth and sophistication to any high-end interior." },
+    { id: 11, name: "dining", image: "/assets/images/product11.jpg", description: "Experience modern luxury with the Serenity Dining Collection, featuring a glossy white table and cushioned chairs with sleek lines. This set offers a serene yet opulent dining solution for contemporary luxury homes" },
+  ];
+
+  const filteredServices = activeTab === 'all'
+    ? allServices
     : allServices.filter(service => service.category === activeTab);
 
   return (
@@ -35,7 +49,7 @@ const Services = () => {
       <PageBanner
         title="Our Services"
         subtitle="Tailored Design Solutions"
-        background="/src/assets/images/services-banner.jpg"
+        background="assets/images/services.jpg"
       />
 
       {/* Services Overview */}
@@ -43,8 +57,8 @@ const Services = () => {
         <div className="container px-4 mx-auto">
           <div className="mb-16 text-center">
             <AnimatedSection>
-              <span className="font-medium text-primary">What We Offer</span>
-              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl">Comprehensive Design Solutions</h2>
+              <span className="font-medium text-gray-200">What We Offer</span>
+              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl text-green-400">Comprehensive Design Solutions</h2>
               <div className="w-20 h-1 mx-auto mb-6 bg-secondary"></div>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                 We provide a full spectrum of interior design services tailored to meet your specific needs and bring your vision to life.
@@ -58,11 +72,10 @@ const Services = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeTab === category.id
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
-                }`}
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${activeTab === category.id
+                  ? 'bg-primary text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
+                  }`}
               >
                 {category.name}
               </button>
@@ -95,15 +108,15 @@ const Services = () => {
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.map((feature, idx) => (
-                      <span 
-                        key={idx} 
+                      <span
+                        key={idx}
                         className="px-3 py-1 text-xs rounded-full bg-primary/10 dark:bg-primary/20 text-primary"
                       >
                         {feature}
                       </span>
                     ))}
                   </div>
-                  <button 
+                  <button
                     className="flex items-center font-medium transition-all duration-300 text-secondary group-hover:text-secondary-dark"
                     aria-label={`Learn more about ${service.title}`}
                   >
@@ -117,13 +130,78 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Products Section */}
+      <section className="py-16 bg-gray-900 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">Our Products</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {products.map(product => (
+              <div
+                key={product.id}
+                className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col"
+              >
+                <div className="relative group">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex-1 flex flex-col p-5">
+                  <h3 className="text-lg font-semibold text-orange-400 mb-2 text-center">{product.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4 text-center">{product.description}</p>
+
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Video Section */}
+
+      <section className="py-16 bg-gray-800 dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="rounded-2xl overflow-hidden shadow-2xl"
+          >
+            <video
+              src="assets/videos/products-video.mp4"
+              controls
+              poster="/assets/images/product1.jpg"
+              className="w-full h-[340px] object-cover bg-black"
+              style={{ backgroundColor: "#111827" }}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-8 text-center"
+          >
+            <h3 className="text-2xl font-bold text-green-300 mb-2">Watch Our Product Showcase</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Explore our exclusive collection in action. This video highlights the craftsmanship, elegance, and versatility of our luxury products, designed to elevate your living spaces.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+
+
       {/* Design Process */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container px-4 mx-auto">
           <div className="mb-16 text-center">
             <AnimatedSection>
-              <span className="font-medium text-primary">How We Work</span>
-              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl">Our Design Process</h2>
+              <span className="font-medium">How We Work</span>
+              <h2 className="mt-2 mb-4 font-serif text-3xl font-bold md:text-4xl text-green-300">Our Design Process</h2>
               <div className="w-20 h-1 mx-auto mb-6 bg-secondary"></div>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                 Our systematic approach ensures a smooth journey from concept to completion, delivering exceptional results that exceed expectations.
@@ -164,11 +242,11 @@ const Services = () => {
                   description: "We add finishing touches, styling elements, and conduct a final quality inspection before presenting you with your transformed space.",
                 },
               ].map((process, index) => (
-                <div 
-                  key={process.step} 
+                <div
+                  key={process.step}
                   className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -206,13 +284,13 @@ const Services = () => {
               "Working with Luxury Interior Design was an exceptional experience from start to finish. Their team's creativity, professionalism, and attention to detail transformed our home into a stunning space that perfectly reflects our lifestyle and taste."
             </blockquote>
             <div className="flex items-center justify-center">
-              <img 
-                src="/src/assets/images/client-avatar.jpg" 
-                alt="Client" 
-                className="object-cover w-12 h-12 mr-4 rounded-full" 
+              <img
+                src="assets/images/client4.webp"
+                alt="Client"
+                className="object-cover w-12 h-12 mr-4 rounded-full"
               />
               <div className="text-left">
-                <h4 className="font-bold text-gray-800 dark:text-white">Robert Johnson</h4>
+                <h4 className="font-bold text-gray-800 dark:text-white">Mukhtar Muhammad</h4>
                 <p className="text-gray-600 dark:text-gray-400">Residential Client</p>
               </div>
             </div>
@@ -231,8 +309,8 @@ const Services = () => {
                   <p className="mb-8 text-lg text-white/90">
                     Contact us today to schedule a consultation and discuss how we can bring your vision to life.
                   </p>
-                  <a 
-                    href="/contact" 
+                  <a
+                    href="/contact"
                     className="inline-block px-8 py-3 font-medium transition-all duration-300 bg- text-gray-300 rounded-full hover:bg-green-300"
                   >
                     Get Started
@@ -240,10 +318,10 @@ const Services = () => {
                 </div>
               </div>
               <div className="hidden lg:block relative h-full min-h-[300px]">
-                <img 
-                  src="/src/assets/images/cta-image.jpg" 
-                  alt="Luxury Interior" 
-                  className="absolute inset-0 object-cover w-full h-full" 
+                <img
+                  src="assets/images/transform.jpg"
+                  alt="Luxury Interior"
+                  className="absolute inset-0 object-cover w-full h-full"
                 />
               </div>
             </div>
