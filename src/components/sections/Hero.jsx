@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
+
 const sampleImages = [
   'assets/images/bg-1.webp',
   'assets/images/bg-1.webp',
@@ -20,21 +21,21 @@ const heroSlides = [
     id: 1,
     title: "Transform Your Space",
     subtitle: "Luxury Interior Design Solutions",
-    image: sampleImages[1],
+    image: sampleImages[0],
     description: "Creating timeless elegance through bespoke interior design"
   },
   {
     id: 2,
     title: "Elevate Your Lifestyle",
     subtitle: "Premium Decoration Services",
-    image: sampleImages[3],
+    image: sampleImages[1],
     description: "Crafting spaces that reflect your unique personality and taste"
   },
   {
     id: 3,
     title: "Exceptional Craftsmanship",
     subtitle: "Attention to Every Detail",
-    image: sampleImages[4],
+    image: sampleImages[2],
     description: "Merging functionality with exquisite aesthetic appeal"
   }
 ];

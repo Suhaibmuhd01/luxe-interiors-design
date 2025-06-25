@@ -42,26 +42,30 @@ The website features a warm, luxurious color palette:
 - **Formik & Yup**: For form handling and validation
 
 ## 📂 Project Structure
+
+```bash
 luxe-interiors-design/
-├── public/               # Static assets
+├── public/             # Static assets
 ├── src/
-│   ├── assets/           # Images, fonts, videos
-│   ├── components/       # Reusable UI components
-│   │   ├── layout/       # Layout components
-│   │   ├── ui/           # UI elements
-│   │   ├── sections/     # Page sections
-│   │   └── shared/       # Shared components
-│   ├── context/          # React contexts
-│   ├── data/             # Mock data
-│   ├── hooks/            # Custom React hooks
-│   ├── pages/            # Page components
-│   ├── utils/            # Utility functions
-│   ├── App.jsx           # Main app component
-│   └── main.jsx          # Entry point
-├── tailwind.config.js    # Tailwind configuration
-├── vite.config.js        # Vite configuration
-├── package.json          # Dependencies and scripts
-└── README.md             # Project documentation
+│   ├── assets/         # Images, fonts, videos
+│   ├── components/     # Reusable UI components
+│   │   ├── layout/
+│   │   ├── ui/
+│   │   ├── sections/
+│   │   └── shared/
+│   ├── context/
+│   ├── data/
+│   ├── hooks/
+│   ├── pages/
+│   ├── utils/
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+```
+
 
 
 ## 🚀 Getting Started
