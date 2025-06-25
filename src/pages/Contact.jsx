@@ -54,7 +54,7 @@ const Contact = () => {
       <PageBanner
         title="Contact Us"
         subtitle="Let's Discuss Your Project"
-        background="/src/assets/images/contact-banner.jpg"
+        background="assets/images/contact.webp"
       />
 
       {/* Contact Information */}
@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="text-center mb-16">
             <AnimatedSection>
               <span className="text-primary font-medium">Get In Touch</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">Contact Information</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4 text-green-400">Contact Information</h2>
               <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                 Have questions or ready to start your project? Contact us today to schedule a consultation with our design experts.
@@ -87,7 +87,7 @@ const Contact = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{info.secondaryContent}</p>
                 )}
                 {info.link && (
-                  <a 
+                  <a
                     href={info.link}
                     target={info.link.startsWith('http') ? "_blank" : "_self"}
                     rel={info.link.startsWith('http') ? "noopener noreferrer" : ""}
@@ -103,7 +103,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <AnimatedSection delay={0.2}>
-              <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold mb-6 text-green-400 dark:text-white">Send Us a Message</h3>
               <ContactForm />
             </AnimatedSection>
 
@@ -132,7 +132,7 @@ const Contact = () => {
           <div className="text-center mb-16">
             <AnimatedSection>
               <span className="text-primary font-medium">Have Questions?</span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4 text-green-400">Frequently Asked Questions</h2>
               <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                 Find answers to common questions about our design process, services, and working with our team.
@@ -197,7 +197,7 @@ const Contact = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center">
-            <h2 className="text-3xl font-serif font-bold mb-6">Connect With Us</h2>
+            <h2 className="text-3xl font-serif font-bold mb-6 text-green-400">Connect With Us</h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
               Follow us on social media for design inspiration, project updates, and insights into the world of luxury interior design.
             </p>

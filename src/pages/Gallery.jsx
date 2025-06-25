@@ -4,7 +4,7 @@ import SEO from '../components/shared/SEO';
 import PageBanner from '../components/shared/PageBanner';
 import AnimatedSection from '../components/shared/AnimatedSection';
 import { projects } from '../data/projects';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaSearch, FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Gallery = () => {
@@ -66,7 +66,7 @@ const Gallery = () => {
       <PageBanner
         title="Our Portfolio"
         subtitle="Showcasing Our Finest Work"
-        background="/src/assets/images/gallery-banner.jpg"
+        background="assets/images/gallery.jpg"
       />
 
       {/* Gallery Section */}
@@ -89,11 +89,10 @@ const Gallery = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition-all duration-300 capitalize ${
-                  selectedCategory === category
+                className={`px-6 py-2 rounded-full transition-all duration-300 capitalize ${selectedCategory === category
                     ? 'bg-primary text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600'
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -142,11 +141,11 @@ const Gallery = () => {
 
       {/* Project Details Modal */}
       {selectedProject && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90" 
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90"
           onClick={handleCloseModal}
         >
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
@@ -155,25 +154,25 @@ const Gallery = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
-            <button 
+            <button
               onClick={handleCloseModal}
               className="absolute z-20 flex items-center justify-center w-10 h-10 text-white transition-colors duration-300 rounded-full top-4 right-4 bg-white/20 hover:bg-white/40"
               aria-label="Close modal"
             >
               <FaTimes size={20} />
             </button>
-            
+
             {/* Navigation Arrows */}
             {selectedProject.gallery.length > 1 && (
               <>
-                <button 
+                <button
                   onClick={handlePrevImage}
                   className="absolute z-20 flex items-center justify-center w-12 h-12 text-white transition-colors duration-300 -translate-y-1/2 rounded-full left-4 top-1/2 bg-white/20 hover:bg-white/40"
                   aria-label="Previous image"
                 >
                   <FaArrowLeft size={20} />
                 </button>
-                <button 
+                <button
                   onClick={handleNextImage}
                   className="absolute z-20 flex items-center justify-center w-12 h-12 text-white transition-colors duration-300 -translate-y-1/2 rounded-full right-4 top-1/2 bg-white/20 hover:bg-white/40"
                   aria-label="Next image"
@@ -182,16 +181,16 @@ const Gallery = () => {
                 </button>
               </>
             )}
-            
+
             {/* Image */}
             <div className="w-full h-[70vh] bg-gray-900 flex items-center justify-center">
-              <img 
-                src={selectedProject.gallery[currentImageIndex]} 
-                alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} 
-                className="object-contain max-w-full max-h-full" 
+              <img
+                src={selectedProject.gallery[currentImageIndex]}
+                alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                className="object-contain max-w-full max-h-full"
               />
             </div>
-            
+
             {/* Project Info */}
             <div className="p-6 bg-white dark:bg-gray-800">
               <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white">{selectedProject.title}</h2>

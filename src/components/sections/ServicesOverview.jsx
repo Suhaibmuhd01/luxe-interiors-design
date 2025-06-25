@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaHome, FaBuilding, FaShoppingBag, FaPencilRuler, FaLightbulb, FaChair } from 'react-icons/fa';
-import{motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -52,20 +52,20 @@ const ServicesOverview = () => {
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-primary font-medium"
+            className="text-stone-300 font-medium"
           >
             Our Expertise
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4"
+            className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4 text-green-400"
           >
             Comprehensive Design Services
           </motion.h2>
@@ -76,7 +76,7 @@ const ServicesOverview = () => {
             transition={{ delay: 0.3 }}
             className="w-20 h-1 bg-secondary mx-auto mb-6"
           ></motion.div>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -86,7 +86,7 @@ const ServicesOverview = () => {
             From concept to completion, we provide end-to-end interior design solutions tailored to your unique vision and requirements.
           </motion.p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -102,8 +102,8 @@ const ServicesOverview = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-all duration-300">{service.title}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">{service.description}</p>
-              <Link 
-                to={service.link} 
+              <Link
+                to={service.link}
                 className="inline-flex items-center text-secondary font-medium hover:text-secondary-dark transition-all duration-300"
               >
                 Learn More
@@ -114,16 +114,16 @@ const ServicesOverview = () => {
             </motion.div>
           ))}
         </div>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
           className="text-center mt-12"
         >
-          <Link 
-            to="/services" 
+          <Link
+            to="/services"
             className="inline-flex items-center bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full transition-all duration-300"
           >
             View All Services

@@ -5,19 +5,19 @@ const projects = [
     id: 1,
     title: "Modern Living Room",
     description: "A stylish and comfortable living space with neutral tones and green accents.",
-    image: "/images/living-room.jpg", //this image exists in public/images
+    image: "assets/images/living-room.webp", //this image exists in public/images
   },
   {
     id: 2,
     title: "Elegant Bedroom",
     description: "Minimalist design featuring white and grey with warm orange lighting.",
-    image: "/images/bedroom.jpg",
+    image: "assets/images/bed-room.webp",
   },
   {
     id: 3,
     title: "Contemporary Office",
     description: "A productivity-enhancing space with a sleek grey palette and green decor.",
-    image: "/images/office.jpg",
+    image: "assets/images/modern-office.jpg",
   },
 ];
 
