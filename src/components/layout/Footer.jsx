@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHeart, FaTiktok } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaHeart, FaTiktok } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -18,10 +18,11 @@ const Footer = () => {
             <div className="flex space-x-4">
               
             {[
-  { icon: <FaFacebookF />, url: 'https://facebook.com/profile.php?id=61567135902792&mibextid=ZbWKwL', label: 'Facebook', color: 'text-blue-200' },
-  { icon: <FaTwitter />, url: 'https://twitter.com/luxury57258?s=09', label: 'Twitter', color: 'text-sky-200' },
-  { icon: <FaInstagram />, url: 'https://www.instagram.com/luxuryinteriodesign01?igsh=eG90cWlsdHF3NWNr', label: 'Instagram', color: 'text-pink-200' },
-  { icon: <FaTiktok />, url: 'https://tiktok.com/@luxury.interior?_t=ZM-8tCiQmKUM57&_r=1', label: 'Tiktok', color: 'text-purple-200' },
+  { icon: <FaFacebookF />, url: 'https://facebook.com/profile.php?id=61567135902792&mibextid=ZbWKwL', label: 'Facebook', color: '#1877F2' },
+  { icon: <FaTwitter />, url: 'https://twitter.com/luxury57258?s=09', label: 'Twitter', color: '#1DA1F2' },
+  { icon: <FaInstagram />, url: 'https://www.instagram.com/luxuryinteriodesign01?igsh=eG90cWlsdHF3NWNr', label: 'Instagram', color: '#E1306C' },
+  { icon: <FaTiktok />, url: 'https://tiktok.com/@luxury.interior?_t=ZM-8tCiQmKUM57&_r=1', label: 'Tiktok', color: '#000000' },
+  { icon: <FaWhatsapp />, url: 'https://wa.me/2348022121271?text=Hello%20Luxury%20Interior%20Design,%20I%27d%20like%20to%20inquire%20about%20your%20services!', label: 'WhatsApp', color: '#25D366' },
 ].map((social, index) => (
   <motion.a
     key={index}
@@ -29,7 +30,8 @@ const Footer = () => {
     target="_blank"
     rel="noopener noreferrer"
     aria-label={social.label}
-    className={`w-10 h-10 rounded-full bg-transparent ${social.color} flex items-center justify-center hover:opacity-80 transition-opacity duration-300`}
+    className="w-10 h-10 rounded-full bg-transparent flex items-center justify-center hover:opacity-80 transition-opacity duration-300"
+    style={{ color: social.color }}
     whileHover={{ y: -3 }}
   >
     {social.icon}

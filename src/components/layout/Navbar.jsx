@@ -45,13 +45,14 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="items-center hidden space-x-8 md:flex">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`transition-all duration-300 hover:text-primary ${location.pathname === link.path ? 'text-primary font-medium' : 'text-gray-700 dark:text-gray-300'}`}
-            >
-              {link.title}
-            </Link>
+           <Link
+           key={link.path}
+           to={link.path}
+           className={`transition-all duration-300 font-medium ${location.pathname === link.path ? 'underline' : ''}`}
+           style={{ color: '#E0E0E0' }}
+         >
+           {link.title}
+         </Link>
           ))}
 
         </div>
@@ -76,13 +77,14 @@ const Navbar = () => {
           >
             <div className="container flex flex-col px-4 py-6 mx-auto space-y-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`transition-all duration-300 py-2 ${location.pathname === link.path ? 'text-primary font-medium' : 'text-gray-700 dark:text-gray-300'}`}
-                >
-                  {link.title}
-                </Link>
+               <Link
+               key={link.path}
+               to={link.path}
+               className={`transition-all duration-300 py-2 font-medium ${location.pathname === link.path ? 'underline' : ''}`}
+               style={{ color: '#E0E0E0' }}
+             >
+               {link.title}
+             </Link>
               ))}
 
             </div>
