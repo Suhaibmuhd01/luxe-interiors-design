@@ -42,27 +42,31 @@ The website features a warm, luxurious color palette:
 - **Formik & Yup**: For form handling and validation
 
 ## 📂 Project Structure
-luxe-interiors-design/
-├── public/               # Static assets
-├── src/
-│   ├── assets/           # Images, fonts, videos
-│   ├── components/       # Reusable UI components
-│   │   ├── layout/       # Layout components
-│   │   ├── ui/           # UI elements
-│   │   ├── sections/     # Page sections
-│   │   └── shared/       # Shared components
-│   ├── context/          # React contexts
-│   ├── data/             # Mock data
-│   ├── hooks/            # Custom React hooks
-│   ├── pages/            # Page components
-│   ├── utils/            # Utility functions
-│   ├── App.jsx           # Main app component
-│   └── main.jsx          # Entry point
-├── tailwind.config.js    # Tailwind configuration
-├── vite.config.js        # Vite configuration
-├── package.json          # Dependencies and scripts
-└── README.md             # Project documentation
 
+```bash
+
+luxe-interiors-design/
+├── public/             # Static assets
+├── src/
+│   ├── assets/         # Images, fonts, videos
+│   ├── components/     # Reusable UI components
+│   │   ├── layout/
+│   │   ├── ui/
+│   │   ├── sections/
+│   │   └── shared/
+│   ├── context/
+│   ├── data/
+│   ├── hooks/
+│   ├── pages/
+│   ├── utils/
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+
+```
 
 ## 🚀 Getting Started
 
@@ -156,78 +160,6 @@ For any inquiries about this project, please reach out to:
 <p align="center">
   Designed & Developed with ❤️ for MTC WORLD
 </p>
-
 <p align="center">
   <img src="https://via.placeholder.com/150/FF7E00/FFFFFF?text=LID" alt="LuxeInteriors Logo">
 </p>
-
-
-Krystal-college/
-├── node_modules/
-├── public/
-│   └── assets/
-│       ├── images/
-│
-├── src/
-│   ├── assets/                # (optional) for imported assets in JS/TS
-│   │   ├── images/
-│   │   └── videos/
-│   │
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Header.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   ├── Navbar.jsx
-│   │   │   └── Layout.jsx
-│   │   │
-│   │   ├── sections/
-│   │   │   ├── Hero.jsx
-│   │   │   ├── AboutPreview.js
-│   │   │   ├── ContactSection.jsx
-│   │   │   ├── TestimonialsSection.jsx
-│   │   │   └── ...
-│   │   │
-│   │   ├── shared/
-│   │   │   ├── AnimatedSection.jsx
-│   │   │   ├── SEO.jsx
-│   │   │   └── PageBanner.jsx
-│   │   │
-│   │   └── ui/
-│   │       ├── ProjectCard.jsx
-│   │       ├── ContactForm.jsx
-│   │       └── ...
-│   │
-│   ├── context/
-│   │   └── UiContext.jsx
-│   │
-│   ├── data/
-│   │   ├── services.js
-│   │   ├── testimonials.js
-│   │   └── ...
-│   │
-│   ├── hooks/
-│   │   ├── useMediaQuery.jsx
-│   │   ├── useScrollAnimation.jsx
-│   │   └── ...
-│   │
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── About.jsx
-│   │   ├── Programs.jsx
-│   │   ├── Teachers.jsx
-│   │   ├── Admissions.jsx
-│   │   └── Contact.jsx
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── .gitignore
-├── .eslintrc.js / .eslintrc.json
-├── index.html
-├── License
-├── package-lock.json
-├── package.json
-├── Readme.md
-├── tailwind.config.js
-└── vite.config.js
