@@ -87,7 +87,6 @@ const ContactSection = () => {
 					</motion.div>
 				))}
 			</div>
-
 			<motion.div
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +97,7 @@ const ContactSection = () => {
   <a
     href="/contact#contact-form"
     className="inline-flex items-center px-8 py-3 bg-white text-gray-900 border-2 border-primary rounded-full shadow-md font-semibold text-lg transition-all duration-300
-      hover:bg-primary hover:text-white focus-visible:bg-primary focus-visible:text-white"
+      hover:bg-gradient-to-r hover:from-white hover:via-gray-100 hover:to-gray-400 focus-visible:bg-primary focus-visible:text-white"
     style={{ boxShadow: '0 4px 24px 0 rgba(34,197,94,0.10)' }}
   >
     <span>Get in Touch</span>

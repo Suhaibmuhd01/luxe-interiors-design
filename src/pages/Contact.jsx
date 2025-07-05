@@ -9,15 +9,26 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-       // Scroll to contact-form if hash is present
-       if (window.location.hash === "#contact-form") {
-        setTimeout(() => {
-          const form = document.getElementById("contact-form");
-          if (form) {
-            form.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }, 200); 
+    // Scroll to contact-form if hash is present
+    if (window.location.hash === "#contact-form") {
+      setTimeout(() => {
+        const form = document.getElementById("contact-form");
+        if (form) {
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.log("Contact form element not found. Check ID.");
+        }
+      }, 500); // Increased delay to 500ms for better rendering
+    }
+    // Handle hash change after initial load
+    const handleHashChange = () => {
+      if (window.location.hash === "#contact-form") {
+        const form = document.getElementById("contact-form");
+        if (form) form.scrollIntoView({ behavior: "smooth", block: "start" });
       }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   const contactInfo = [
