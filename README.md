@@ -160,3 +160,74 @@ For any inquiries about this project, please reach out to:
 <p align="center">
   <img src="https://via.placeholder.com/150/FF7E00/FFFFFF?text=LID" alt="LuxeInteriors Logo">
 </p>
+
+
+Krystal-college/
+├── node_modules/
+├── public/
+│   └── assets/
+│       ├── images/
+│
+├── src/
+│   ├── assets/                # (optional) for imported assets in JS/TS
+│   │   ├── images/
+│   │   └── videos/
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Layout.jsx
+│   │   │
+│   │   ├── sections/
+│   │   │   ├── Hero.jsx
+│   │   │   ├── AboutPreview.js
+│   │   │   ├── ContactSection.jsx
+│   │   │   ├── TestimonialsSection.jsx
+│   │   │   └── ...
+│   │   │
+│   │   ├── shared/
+│   │   │   ├── AnimatedSection.jsx
+│   │   │   ├── SEO.jsx
+│   │   │   └── PageBanner.jsx
+│   │   │
+│   │   └── ui/
+│   │       ├── ProjectCard.jsx
+│   │       ├── ContactForm.jsx
+│   │       └── ...
+│   │
+│   ├── context/
+│   │   └── UiContext.jsx
+│   │
+│   ├── data/
+│   │   ├── services.js
+│   │   ├── testimonials.js
+│   │   └── ...
+│   │
+│   ├── hooks/
+│   │   ├── useMediaQuery.jsx
+│   │   ├── useScrollAnimation.jsx
+│   │   └── ...
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Programs.jsx
+│   │   ├── Teachers.jsx
+│   │   ├── Admissions.jsx
+│   │   └── Contact.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .gitignore
+├── .eslintrc.js / .eslintrc.json
+├── index.html
+├── License
+├── package-lock.json
+├── package.json
+├── Readme.md
+├── tailwind.config.js
+└── vite.config.js

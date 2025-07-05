@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/shared/SEO';
-// import motion from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const NotFound = () => {
   return (
@@ -47,7 +47,7 @@ const NotFound = () => {
           >
             <Link
               to="/"
-              className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full inline-block transition-colors duration-300"
+              className="bg-primary hover:bg-primary-dark text-grey px-8 py-3 rounded-full inline-block transition-colors duration-300"
             >
               Back to Home
             </Link>

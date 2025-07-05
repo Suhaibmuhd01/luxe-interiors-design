@@ -16,26 +16,25 @@ const Footer = () => {
               Transforming spaces into extraordinary environments that inspire, comfort, and reflect the unique personalities of our clients.
             </p>
             <div className="flex space-x-4">
-              {[
-                { icon: <FaFacebookF />, url: 'https://facebook.com/profile.php?id=61567135902792&mibextid=ZbWKwL', label: 'Facebook' },
-                { icon: <FaTwitter />, url: 'https://twitter.com/luxury57258?s=09', label: 'Twitter' },
-                { icon: <FaInstagram />, url: ' https://www.instagram.com/luxuryinteriodesign01?igsh=eG90cWlsdHF3NWNr', label: 'Instagram' },
-                { icon: <FaTiktok />, url: 'https://tiktok.com/@luxury.interior?_t=ZM-8tCiQmKUM57&_r=1', label: 'Tiktok' },
-                // { icon: <FaLinkedinIn />, url: 'https://linkedin.com/', label: 'LinkedIn' }
-
-              ].map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary-dark transition-colors duration-300"
-                  whileHover={{ y: -3 }}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
+              
+            {[
+  { icon: <FaFacebookF />, url: 'https://facebook.com/profile.php?id=61567135902792&mibextid=ZbWKwL', label: 'Facebook', color: 'text-blue-200' },
+  { icon: <FaTwitter />, url: 'https://twitter.com/luxury57258?s=09', label: 'Twitter', color: 'text-sky-200' },
+  { icon: <FaInstagram />, url: 'https://www.instagram.com/luxuryinteriodesign01?igsh=eG90cWlsdHF3NWNr', label: 'Instagram', color: 'text-pink-200' },
+  { icon: <FaTiktok />, url: 'https://tiktok.com/@luxury.interior?_t=ZM-8tCiQmKUM57&_r=1', label: 'Tiktok', color: 'text-purple-200' },
+].map((social, index) => (
+  <motion.a
+    key={index}
+    href={social.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={social.label}
+    className={`w-10 h-10 rounded-full bg-transparent ${social.color} flex items-center justify-center hover:opacity-80 transition-opacity duration-300`}
+    whileHover={{ y: -3 }}
+  >
+    {social.icon}
+  </motion.a>
+))}
             </div>
           </div>
 

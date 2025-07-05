@@ -1,5 +1,3 @@
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -15,7 +13,7 @@ export default {
           light: '#FF9933'
         },
         secondary: {
-          DEFAULT: '#2E8B57', // Green (Sea Green)
+          DEFAULT: '#2E8B57', // Sea Green
           dark: '#1D6E45',
           light: '#3CAB6E'
         },
@@ -24,8 +22,19 @@ export default {
           dark: '#1a1a1a',
           light: '#3a3a3a',
           accent: '#f5f5f5',
-          gold: '#FF9933' // Changed to orange-gold to match theme
-        }
+          gold: '#FF9933'
+        },
+        'green-400': '#4ade80',
+        'green-300': '#86efac',
+        'green-700': '#15803d',
+        'orange-400': '#fb923c',
+        'gray-900': '#111827',
+        'gray-800': '#1f2937',
+        'gray-700': '#374151',
+        'gray-600': '#4b5563',
+        'gray-300': '#d1d5db',
+        'gray-100': '#f3f4f6',
+        'white': '#ffffff',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

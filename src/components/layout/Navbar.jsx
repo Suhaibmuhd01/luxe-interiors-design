@@ -13,6 +13,7 @@ const Navbar = () => {
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
     { title: 'Services', path: '/services' },
+    { title: 'Products', path: '/products' },
     { title: 'Gallery', path: '/gallery' },
     { title: 'Team', path: '/team' },
     { title: 'Contact', path: '/contact' },
@@ -37,7 +38,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container flex items-center justify-between px-4 mx-auto">
         {/* Logo */}
-        <Link to="/public/logo.jpg" className="text-2xl font-bold text-primary">
+        <Link to="assets/logo/logo.jpg" className="text-2xl font-bold text-primary">
           Luxury Interior Design & Decorations LTD
         </Link>
 
