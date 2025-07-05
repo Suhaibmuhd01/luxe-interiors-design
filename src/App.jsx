@@ -16,6 +16,7 @@ import Contact from './pages/Contact';
 // Import layout components
 import Layout from './components/layout/Layout';
 import NotFound from './pages/NotFound';
+import Products from './pages/Products';
 
 function App() {
   // Initialize AOS animation library
@@ -27,21 +28,22 @@ function App() {
     });
   }, []);
   return (
-  <HelmetProvider>
+    <HelmetProvider>
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/notfound" element={<NotFound />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-     </HelmetProvider>
+    </HelmetProvider>
   );
 }
 

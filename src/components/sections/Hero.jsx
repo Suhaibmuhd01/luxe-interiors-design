@@ -10,8 +10,8 @@ import 'swiper/css/pagination';
 
 const sampleImages = [
   'assets/images/bg-1.webp',
-  'assets/images/bg-1.webp',
-  'assets/images/bg-1.webp',
+  'assets/images/bg-2.webp',
+  'assets/images/bg-3.webp',
   'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
   'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&q=85&w=1920&h=1080',
 ];

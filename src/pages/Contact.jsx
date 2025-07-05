@@ -9,6 +9,26 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Scroll to contact-form if hash is present
+    if (window.location.hash === "#contact-form") {
+      setTimeout(() => {
+        const form = document.getElementById("contact-form");
+        if (form) {
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          console.log("Contact form element not found. Check ID.");
+        }
+      }, 500); // Increased delay to 500ms for better rendering
+    }
+    // Handle hash change after initial load
+    const handleHashChange = () => {
+      if (window.location.hash === "#contact-form") {
+        const form = document.getElementById("contact-form");
+        if (form) form.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
   const contactInfo = [
@@ -103,8 +123,10 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <AnimatedSection delay={0.2}>
-              <h3 className="text-2xl font-bold mb-6 text-green-400 dark:text-white">Send Us a Message</h3>
-              <ContactForm />
+              <div id="contact-form">
+                <h3 className="text-2xl font-bold mb-6 text-green-400 dark:text-white">Send Us a Message</h3>
+                <ContactForm />
+              </div>
             </AnimatedSection>
 
             {/* Map */}
@@ -112,7 +134,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Visit Our Studio</h3>
               <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-elegant h-[500px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304605!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1627309375661!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243.9400247844682!2d8.547051095214862!3d11.971705051480983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1751287681868!5m2!1sen!2sng"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -203,10 +225,10 @@ const Contact = () => {
             </p>
             <div className="flex justify-center space-x-6">
               {[
-                { name: "Facebook", icon: "facebook", url: "https://facebook.com" },
-                { name: "Instagram", icon: "instagram", url: "https://instagram.com/@LuxeInteriorsDecor" },
-                { name: "Pinterest", icon: "pinterest", url: "https://pinterest.com/Luxury Interior Designs and Decoration Ltd" },
-                { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/Luxury Interior Design and Decoration Ltd" },
+                { name: "Facebook", icon: "facebook", url: "https://facebook.com/profile.php?id=61567135902792&mibextid=ZbWKwL" },
+                { name: "Twitter", icon: "Twiter", url: "https://twitter.com/luxury57258?s=09" },
+                { name: "Instagram", icon: "Instagram", url: "https://www.instagram.com/luxuryinteriodesign01?igsh=eG90cWlsdHF3NWNr" },
+                { name: "Tiktok", icon: "Tiktok", url: "https://tiktok.com/@luxury.interior?_t=ZM-8tCiQmKUM57&_r=1'" },
               ].map((social) => (
                 <motion.a
                   key={social.name}

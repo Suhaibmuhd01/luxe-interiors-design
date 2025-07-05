@@ -3,7 +3,7 @@ export const allServices = [
     id: 1,
     title: "Residential Interior Design",
     category: "residential",
-    image: "assets/images/bg-2.jpeg",
+    image: "assets/images/bg-2.webp",
     description: "Transform your home into a personalized sanctuary that reflects your lifestyle and aesthetic preferences. Our comprehensive residential design services cover everything from single room makeovers to complete home transformations.",
     features: ["Space Planning", "Custom Furniture", "Color Consultation", "Material Selection", "Lighting Design", "Art Curation"],
     detailed_process: "Our residential design process begins with an in-depth consultation to understand your vision, needs, and lifestyle. We then develop a comprehensive design concept, including space planning, color schemes, furniture layouts, and material selections. Our detailed implementation plan ensures a smooth execution of the design, whether you're renovating an existing space or designing a new home."
@@ -12,7 +12,7 @@ export const allServices = [
     id: 2,
     title: "Commercial Interior Design",
     category: "commercial",
-    image: "assets/images/bg-3.jpeg",
+    image: "assets/images/bg-3.webp",
     description: "Create impressive commercial environments that enhance productivity, reflect your brand identity, and leave lasting impressions on clients and employees alike. We specialize in offices, retail spaces, and hospitality venues.",
     features: ["Brand Integration", "Space Optimization", "Ergonomic Solutions", "Commercial Furniture", "Acoustic Planning", "ADA Compliance"],
     detailed_process: "Our commercial design process focuses on understanding your business objectives, brand values, and operational requirements. We analyze workflow patterns, space utilization, and brand expression to create environments that support your business goals. Our designs consider both aesthetic appeal and functional efficiency, ensuring spaces that work as beautifully as they look."

@@ -44,6 +44,7 @@ The website features a warm, luxurious color palette:
 ## 📂 Project Structure
 
 ```bash
+
 luxe-interiors-design/
 ├── public/             # Static assets
 ├── src/
@@ -64,9 +65,8 @@ luxe-interiors-design/
 ├── vite.config.js
 ├── package.json
 └── README.md
+
 ```
-
-
 
 ## 🚀 Getting Started
 
@@ -160,7 +160,6 @@ For any inquiries about this project, please reach out to:
 <p align="center">
   Designed & Developed with ❤️ for MTC WORLD
 </p>
-
 <p align="center">
   <img src="https://via.placeholder.com/150/FF7E00/FFFFFF?text=LID" alt="LuxeInteriors Logo">
 </p>
